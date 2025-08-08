@@ -2,24 +2,24 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "[Project Name]",
-      description: "[Brief description of your project]",
-      tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-      link: "#"
+      title: "Deep Learning Image Classifier",
+      description: "Image classifier using a custom neural network with 90% accuracy",
+      tech: ["[Python]", "[PyTorch]"],
+      link: "https://google.com"
     },
     {
       id: 2,
-      title: "[Project Name]", 
-      description: "[Brief description of your project]",
-      tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-      link: "#"
+      title: "Stock Market Analysis App", 
+      description: "Full stack stock trading information platform with custom LLM integration, user functionalities, and real-time information lookup.",
+      tech: ["[React.js]", "[OpenAI]", "[Polygon]"],
+      link: "https://google.com"
     },
     {
       id: 3,
-      title: "[Project Name]", 
-      description: "[Brief description of your project]",
-      tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-      link: "#"
+      title: "Nonprofit Organization Website", 
+      description: "Full stack web app for a nonprofit organization resulting in hundreds of site viewers per month, increased event sales, and increased sponsor engagement.",
+      tech: ["[React.js]"],
+      link: "https://marylandmayuri.org"
     }
   ]
 

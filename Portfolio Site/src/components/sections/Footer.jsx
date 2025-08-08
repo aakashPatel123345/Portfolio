@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <p className="footer-text">
-          &copy; 2024 [Your Name]. All rights reserved.
+          &copy; 2025 [Aakash Patel]. All rights reserved.
         </p>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 
 .contact {
   padding: 5rem 0;
-  background-color: #f9fafb;
+  background-color: #0f0f23;
 }
 
 .contact-container {
@@ -22,7 +22,7 @@
 .contact-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #f1f5f9;
   margin-bottom: 1.5rem;
 }
 
@@ -32,13 +32,13 @@
 
 .contact-item {
   margin-bottom: 1rem;
-  color: #4b5563;
+  color: #cbd5e1;
   line-height: 1.6;
 }
 
 .contact-label {
   font-weight: 600;
-  color: #1f2937;
+  color: #f1f5f9;
 }
 
 .social-list {
@@ -48,14 +48,14 @@
 }
 
 .social-link {
-  color: #3b82f6;
+  color: #8b5cf6;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #1d4ed8;
+  color: #a78bfa;
 }
 
 /* Mobile responsive */
