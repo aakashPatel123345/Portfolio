@@ -1,8 +1,8 @@
-/* About section styles */
+/* About section styles - Sunset Theme */
 
 .about {
   padding: 5rem 0;
-  background-color: #0f0f23;
+  background-color: #1a0f0a;
 }
 
 .about-container {
@@ -20,7 +20,7 @@
 .about-text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cbd5e1;
+  color: #fdba74;
   margin-bottom: 1.5rem;
 }
 

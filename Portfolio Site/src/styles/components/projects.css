@@ -1,8 +1,8 @@
-/* Projects section styles */
+/* Projects section styles - Sunset Theme */
 
 .projects {
   padding: 5rem 0;
-  background-color: #0f0f23;
+  background-color: #1a0f0a;
 }
 
 .projects-container {
@@ -19,20 +19,20 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(251, 146, 60, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(234, 88, 12, 0.2);
   border-radius: 0.75rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(69, 26, 3, 0.4);
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(251, 146, 60, 0.12);
+  box-shadow: 0 20px 40px rgba(69, 26, 3, 0.6);
+  border-color: rgba(234, 88, 12, 0.3);
 }
 
 .project-content {
@@ -42,12 +42,12 @@
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: #fcd34d;
   margin-bottom: 1rem;
 }
 
 .project-description {
-  color: #cbd5e1;
+  color: #fdba74;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -60,9 +60,9 @@
 }
 
 .tech-tag {
-  background: rgba(99, 102, 241, 0.2);
-  color: #c7d2fe;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(234, 88, 12, 0.3);
+  color: #fef3c7;
+  border: 1px solid rgba(251, 146, 60, 0.4);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -71,8 +71,8 @@
 
 .project-link {
   display: inline-block;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #ea580c;
+  color: #fef3c7;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -81,7 +81,7 @@
 }
 
 .project-link:hover {
-  background-color: #2563eb;
+  background-color: #dc2626;
 }
 
 /* Mobile responsive */

@@ -1,8 +1,8 @@
-/* Contact section styles */
+/* Contact section styles - Sunset Theme */
 
 .contact {
   padding: 5rem 0;
-  background-color: #0f0f23;
+  background-color: #1a0f0a;
 }
 
 .contact-container {
@@ -22,7 +22,7 @@
 .contact-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: #fcd34d;
   margin-bottom: 1.5rem;
 }
 
@@ -32,13 +32,13 @@
 
 .contact-item {
   margin-bottom: 1rem;
-  color: #cbd5e1;
+  color: #fdba74;
   line-height: 1.6;
 }
 
 .contact-label {
   font-weight: 600;
-  color: #f1f5f9;
+  color: #fcd34d;
 }
 
 .social-list {
@@ -48,14 +48,14 @@
 }
 
 .social-link {
-  color: #8b5cf6;
+  color: #ea580c;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #a78bfa;
+  color: #fb923c;
 }
 
 /* Mobile responsive */
