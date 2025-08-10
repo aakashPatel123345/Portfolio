@@ -27,10 +27,10 @@ function Contact() {
               Social Links
             </h3>
             <div className="social-list">
-              <a href="#" className="social-link">
+              <a href="https://www.linkedin.com/in/aakash-patel-akp/" target="_blank" className="social-link">
                 https://www.linkedin.com/in/aakash-patel-akp/
               </a>
-              <a href="#" className="social-link">
+              <a href="https://github.com/aakashPatel123345"  target="_blank" className="social-link">
                 https://github.com/aakashPatel123345
               </a>
             </div>

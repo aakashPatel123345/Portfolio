@@ -7,10 +7,11 @@ function About() {
         </h2>
         <div className="about-content">
           <p className="about-text">
-            [Write a brief introduction about yourself]
+            Hi, I'm Aakash Patel, a recent computer science graduate from the University of Maryland.
+
           </p>
           <p className="about-text">
-            [Add your background, skills, and what drives you as a developer]
+            Recent CS graduate experienced in React, JavaScript, and Python. Passionate about collaborative, impactful software. Resume
           </p>
         </div>
       </div>

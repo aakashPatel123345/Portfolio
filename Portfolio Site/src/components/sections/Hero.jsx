@@ -21,14 +21,12 @@ function Hero() {
           </div>
           <div className="hero-image">
             <div className="profile-placeholder">
-              {/* Replace this div with your actual image */}
               <img 
                 src={hero} 
                 alt="Aakash - Software Engineer"
                 className="profile-image"
               />
               <div className="image-overlay">
-                <span>Add your photo here</span>
               </div>
             </div>
           </div>
