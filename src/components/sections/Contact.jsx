@@ -17,9 +17,7 @@ function Contact() {
               <p className="contact-item">
                 <span className="contact-label">Phone:</span> +1 (848) 234-0229
               </p>
-              <p className="contact-item">
-                <span className="contact-label">Location:</span> [Kendall Park, New Jersey]
-              </p>
+
             </div>
           </div>
           <div className="social-links">
