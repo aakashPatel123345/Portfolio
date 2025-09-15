@@ -6,9 +6,6 @@ function Contact() {
           Get In Touch
         </h2>
         <div className="contact-content">
-          <p className="contact-description">
-            Let's connect and discuss opportunities
-          </p>
           <div className="contact-buttons">
             <a 
               href="mailto:aakash.patel0377@gmail.com" 
