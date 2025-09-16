@@ -1,9 +1,9 @@
-/* Footer styles */
+/* Footer styles - Sunset Theme */
 
 .footer {
-  background-color: #0f0f23;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
+  background-color: #1a0f0a;
+  border-top: 1px solid rgba(251, 146, 60, 0.15);
+  color: #fed7aa;
   padding: 2rem 0;
 }
 

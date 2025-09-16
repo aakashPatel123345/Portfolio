@@ -11,7 +11,7 @@ function About() {
 
           </p>
           <p className="about-text">
-            Recent CS graduate experienced in React, JavaScript, and Python. Passionate about collaborative, impactful software. Resume
+            Driven by a passion for full-stack development and the transformative potential of AI.
           </p>
         </div>
       </div>

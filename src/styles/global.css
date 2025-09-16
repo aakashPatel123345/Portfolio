@@ -1,4 +1,4 @@
-/* Global styles and utilities */
+/* Global styles and utilities - Sunset Theme */
 
 /* App container */
 .app {
@@ -11,8 +11,8 @@
 body {
   font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #e5e7eb;
-  background-color: #0f0f23;
+  color: #fbbf24;
+  background-color: #1a0f0a;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   font-optical-sizing: auto;
 }
@@ -35,9 +35,9 @@ html {
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: #f8fafc;
+  color: #fcd34d;
   position: relative;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +51,7 @@ html {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
   border-radius: 2px;
 }
 
@@ -76,12 +76,12 @@ html {
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #ea580c;
+  color: #fef3c7;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #dc2626;
   transform: translateY(-2px);
 }
 
