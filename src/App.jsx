@@ -5,6 +5,8 @@ import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Footer from './components/sections/Footer'
 
+import { Analytics } from '@vercel/analytics/next'
+
 function App() {
   return (
     <div className="app">

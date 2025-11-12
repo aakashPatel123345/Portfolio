@@ -16,10 +16,10 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Nonprofit Organization Website", 
-      description: "Full stack web app for a nonprofit organization resulting in hundreds of site viewers per month, increased event sales, and increased sponsor engagement.",
-      tech: ["[React.js]"],
-      link: "https://marylandmayuri.org"
+      title: "RAG Powered AI Chatbot", 
+      description: "Engineered a high-performance, RAG-powered AI Digital Twin using a decoupled Python (FastAPI)/React stack to deliver fact-based, context-aware insights on the user.",
+      tech: ["[React.js]", "[FastAPI]", "[LangChain]", "[Gemini]"],
+      link: "https://github.com/aakashPatel123345/Personal-AI-Chatbot"
     }
   ]
 
