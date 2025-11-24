@@ -6,21 +6,24 @@ function Projects() {
       description: "Engineered a high-performance, RAG-powered AI Digital Twin using a decoupled Python (FastAPI)/React stack to deliver fact-based, context-aware insights on the user.",
       tech: ["[React.js]", "[FastAPI]", "[LangChain]", "[Gemini]"],
       link: "https://github.com/aakashPatel123345/Personal-AI-Chatbot",
-      featured: true
+      featured: true,
+      video: "/rag-chatbot-demo.mp4" // Add your video file to public folder
     },
     {
       id: 2,
       title: "Stock Market Analysis App", 
       description: "Full stack stock trading information platform with custom LLM integration, user functionalities, and real-time information lookup.",
       tech: ["[React.js]", "[OpenAI]", "[Polygon]"],
-      link: "https://google.com"
+      link: "https://google.com",
+      image: "/stock-market-app.jpg" // Add your image file to public folder
     },
     {
       id: 3,
       title: "Deep Learning Image Classifier",
       description: "Image classifier using a custom neural network with 90% accuracy",
       tech: ["[Python]", "[PyTorch]"],
-      link: "https://google.com"
+      link: "https://google.com",
+      image: "/image-classifier.jpg" // Add your image file to public folder
     }
   ]
 
@@ -36,6 +39,18 @@ function Projects() {
         
         {/* Featured Project */}
         <div className="featured-project">
+          {featuredProject.video && (
+            <video 
+              className="featured-project-video" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+            >
+              <source src={featuredProject.video} type="video/mp4" />
+            </video>
+          )}
+          <div className="featured-project-overlay"></div>
           <div className="featured-project-content">
             <h3 className="featured-project-title">
               {featuredProject.title}
@@ -58,6 +73,12 @@ function Projects() {
           <div className="projects-grid">
             {otherProjects.map(project => (
               <div key={project.id} className="project-card">
+                {project.image && (
+                  <div 
+                    className="project-card-image" 
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  ></div>
+                )}
                 <div className="project-content">
                   <h4 className="project-title">
                     {project.title}
