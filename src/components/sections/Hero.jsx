@@ -13,7 +13,7 @@ function Hero() {
               Hello, I'm Aakash
             </h1>
             <p className="hero-subtitle">
-              An aspiring software engineer
+              A full-stack and AI software engineer
             </p>
             <a href="#contact" className="hero-cta">
               Get In Touch

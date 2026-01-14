@@ -7,7 +7,7 @@ function About() {
         </h2>
         <div className="about-content">
           <p className="about-text">
-            Hi, I'm Aakash Patel, a recent computer science graduate from the University of Maryland.
+            Hi, I'm Aakash Patel, a full time software engineer.
 
           </p>
           <p className="about-text">
