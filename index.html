@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/aakash-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbf8f1" />
     <title>Aakash Patel</title>
     <script>
       (function () {
+        var PAPER = { light: '#fbf8f1', dark: '#020a09' };
         try {
           var stored = localStorage.getItem('theme');
           var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
           document.documentElement.dataset.theme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', PAPER[theme]);
         } catch (e) {
           document.documentElement.dataset.theme = 'light';
         }

@@ -44,6 +44,7 @@
 .about-contact__table {
   width: 100%;
   max-width: 640px;
+  table-layout: fixed;
   border-collapse: collapse;
   border-top: 1px solid var(--rule-strong);
 }
@@ -52,7 +53,7 @@
   border-bottom: 1px solid var(--rule);
 }
 
-.about-contact__label,
+.about-contact__label-cell,
 .about-contact__value {
   text-align: left;
   font-weight: 400;
@@ -60,12 +61,31 @@
   color: var(--ink);
 }
 
-.about-contact__label {
+.about-contact__label-cell {
+  width: 56px;
   color: var(--muted);
-  width: 140px;
+}
+
+.about-contact__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--muted);
+}
+
+.about-contact__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-contact__value {
+  overflow-wrap: anywhere;
 }
 
 .about-contact__arrow-cell {
+  width: 52px;
   text-align: right;
   padding: 0 4px;
 }
@@ -94,7 +114,8 @@
     max-width: 160px;
   }
 
-  .about-contact__label {
-    width: auto;
+  .about-contact__label-cell {
+    width: 44px;
+    padding: 16px 6px;
   }
 }

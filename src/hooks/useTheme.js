@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 const STORAGE_KEY = 'theme';
+const PAPER = { light: '#fbf8f1', dark: '#020a09' };
 
 function getInitialTheme() {
   if (typeof document === 'undefined') return 'light';
@@ -12,6 +13,8 @@ export default function useTheme() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', PAPER[theme]);
   }, [theme]);
 
   const toggleTheme = useCallback(() => {

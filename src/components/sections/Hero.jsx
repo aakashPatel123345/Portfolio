@@ -14,8 +14,8 @@ export default function Hero() {
           <em className="hero__accent">assume the model is wrong.</em>
         </Reveal>
         <Reveal as="p" index={2} threshold={0.4} className="hero__line">
-          Full-stack by day — .NET, Angular, Azure. LLM pipelines by design: validation, dedup,
-          cost, and a human in the loop.
+          I’m a full-stack software engineer working with .NET, Angular, and Azure. 
+          In my free time I build AI-powered applications with a simple goal: make AI useful in the real world, not just impressive in a demo.
         </Reveal>
         <Reveal as="div" index={3} threshold={0.4} className="hero__actions">
           <a className="hero__link hero__link--primary" href="#work">
