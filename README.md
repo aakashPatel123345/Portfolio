@@ -1,12 +1,15 @@
 # Portfolio Site
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
+Aakash Patel's portfolio — a single-page site in a "Ledger Editorial" style: paper-and-ink
+palette, mono/serif type, and a live mock of the Budgeting AI app's spending assistant. Built with
+React and Vite, styled with hand-written CSS driven by a single design-token file (no CSS
+framework).
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js (v18 or higher)
+- npm
 
 ### Installation
 
@@ -25,37 +28,53 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
 ## 🛠️ Built With
 
-- **React** - Frontend framework
-- **Vite** - Build tool and development server
-- **Tailwind CSS** - Utility-first CSS framework
-- **PostCSS** - CSS post-processor
+- **React 19** — UI library
+- **Vite** — build tool and dev server
+- **Hand-written CSS** — no framework; every color, type size, and spacing value is a CSS custom
+  property defined in `src/styles/tokens.css`
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── NavBar.jsx          # Navigation component
-│   └── sections/           # Page sections
-│       ├── About.jsx       # About section
-│       ├── Projects.jsx    # Projects showcase
-│       └── Contact.jsx     # Contact information
-├── App.jsx                 # Main app component
-├── main.jsx               # App entry point
-└── index.css              # Global styles with Tailwind
+│   ├── LedgerGrid.jsx           # Cursor-reactive graph-paper background
+│   ├── NavRail.jsx              # Sticky nav bar (section links, dark-mode toggle)
+│   ├── Reveal.jsx               # Scroll-in/out reveal wrapper (IntersectionObserver)
+│   ├── SectionHead.jsx          # Shared "01 — LABEL" section heading
+│   ├── SpendingRoast.jsx        # Hero widget: mock chat with the budgeting app's spending assistant
+│   └── sections/
+│       ├── Hero.jsx             # Hero copy + SpendingRoast
+│       ├── Flagship.jsx         # Budgeting AI feature walkthrough
+│       ├── Work.jsx             # Selected work grid
+│       ├── WorkCard.jsx         # Individual project card
+│       ├── AboutContact.jsx     # Bio + ledger-style contact table
+│       └── Footer.jsx
+├── hooks/
+│   ├── useScrollReveal.js       # Powers Reveal — toggles visibility on viewport enter/exit
+│   ├── useParallax.js           # Subtle scroll-linked parallax (portrait)
+│   └── useTheme.js              # Light/dark theme state + persistence
+├── styles/
+│   ├── tokens.css               # Design tokens: color, type, spacing, motion; light/dark palettes
+│   └── components/              # One stylesheet per component, imported by that component
+├── assets/
+│   └── hero_picture.jpg
+├── App.jsx                      # Section order
+└── main.jsx                     # Entry point
 ```
 
 ## 🎨 Customization
 
-### Personal Information
-- Update your name in `src/App.jsx` (hero section)
-- Modify contact details in `src/components/sections/Contact.jsx`
-- Add your projects in `src/components/sections/Projects.jsx`
-- Update your bio in `src/components/sections/About.jsx`
-
-### Styling
-- Tailwind classes can be customized in `tailwind.config.js`
-- Global styles can be added to `src/index.css`
+- **Colors, type, spacing, motion**: all defined once in `src/styles/tokens.css` under `:root`
+  (light) and `:root[data-theme='dark']` (dark) — change a value there and it propagates
+  everywhere.
+- **Copy and content**: each section's text lives directly in its component under
+  `src/components/sections/`.
+- **Bracketed placeholders** (e.g. `[COMPANY]`, `[PROJECT URL]`) mark facts that are intentionally
+  unfilled — replace them once the real values exist rather than guessing.
+- **Dark mode**: the palette is defined in `tokens.css`; the toggle and system-preference detection
+  live in `src/hooks/useTheme.js` and the inline script in `index.html` (prevents a flash of the
+  wrong theme on load).
 
 ## 📦 Available Scripts
 
@@ -76,10 +95,10 @@ The built files will be in the `dist/` directory, ready for deployment to any st
 
 ## 📝 Notes
 
-- The site is fully responsive and mobile-friendly
-- Smooth scrolling navigation between sections
-- Modern gradient hero section
-- Clean project cards with technology tags
-- Contact section with social links
-
-test
+- Fully responsive, with layouts verified down to 375px.
+- Every animation (scroll reveals, cursor-reactive grid, parallax) respects
+  `prefers-reduced-motion` and drops to an instant final state when set.
+- Accessibility: real `<a>`/`<button>` elements, `aria-label`s on icon-only controls, 44px touch
+  targets, visible focus rings, and AA-contrast-checked palettes in both themes.
+- The Budgeting AI project is in progress — its section is labeled accordingly, and the
+  spending-assistant widget in the hero is an illustrative mockup, not a live model call.
