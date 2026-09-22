@@ -1,13 +1,10 @@
-function Footer() {
+import '../../styles/components/footer.css';
+
+export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <p className="footer-text">
-          &copy; 2025 Aakash Patel. All rights reserved.
-        </p>
-      </div>
+      <p className="footer__line mono-label">© 2026 Aakash Patel</p>
+      <p className="footer__line mono-label">Set in Instrument Serif, Geist &amp; Geist Mono</p>
     </footer>
-  )
+  );
 }
-
-export default Footer

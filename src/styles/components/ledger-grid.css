@@ -1,0 +1,39 @@
+.ledger-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  --cursor-x: 50vw;
+  --cursor-y: 40vh;
+}
+
+.ledger-grid__base,
+.ledger-grid__spotlight {
+  position: absolute;
+  inset: 0;
+  background-size: 48px 48px;
+}
+
+.ledger-grid__base {
+  background-image: linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  opacity: 0.28;
+}
+
+.ledger-grid__spotlight {
+  background-image: linear-gradient(var(--rule-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule-strong) 1px, transparent 1px);
+  opacity: 0.5;
+  -webkit-mask-image: radial-gradient(
+    220px circle at var(--cursor-x) var(--cursor-y),
+    black 0%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(220px circle at var(--cursor-x) var(--cursor-y), black 0%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ledger-grid__spotlight {
+    display: none;
+  }
+}

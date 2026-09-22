@@ -1,20 +1,16 @@
-/* Footer styles - Dark Blue Theme */
-
 .footer {
-  background-color: #0a0a0a;
-  border-top: 1px solid rgba(96, 165, 250, 0.15);
-  color: #bfdbfe;
-  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px var(--page-margin);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--muted);
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.footer-text {
+.footer__line {
   margin: 0;
-  opacity: 0.8;
 }
