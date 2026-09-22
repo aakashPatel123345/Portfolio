@@ -1,0 +1,78 @@
+.spending-roast {
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  padding: 24px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.spending-roast__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.spending-roast__badge {
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 3px 8px;
+}
+
+.spending-roast__version {
+  color: var(--muted);
+}
+
+.spending-roast__chat {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spending-roast__message {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 88%;
+}
+
+.spending-roast__message--user {
+  align-self: flex-end;
+  align-items: flex-end;
+  border-right: 2px solid var(--rule-strong);
+  padding-right: 12px;
+}
+
+.spending-roast__message--app {
+  align-self: flex-start;
+  align-items: flex-start;
+  border-left: 2px solid var(--green);
+  padding-left: 12px;
+}
+
+.spending-roast__sender {
+  color: var(--muted);
+}
+
+.spending-roast__bubble {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+}
+
+.spending-roast__breakdown {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .spending-roast {
+    padding: 16px;
+  }
+
+  .spending-roast__message {
+    max-width: 100%;
+  }
+}

@@ -1,8 +1,9 @@
-import NavBar from './components/NavBar'
+import LedgerGrid from './components/LedgerGrid'
+import NavRail from './components/NavRail'
 import Hero from './components/sections/Hero'
-import About from './components/sections/About'
-import Projects from './components/sections/Projects'
-import Contact from './components/sections/Contact'
+import Flagship from './components/sections/Flagship'
+import Work from './components/sections/Work'
+import AboutContact from './components/sections/AboutContact'
 import Footer from './components/sections/Footer'
 
  // import { Analytics } from '@vercel/analytics/next'
@@ -10,11 +11,12 @@ import Footer from './components/sections/Footer'
 function App() {
   return (
     <div className="app">
-      <NavBar />
+      <LedgerGrid />
+      <NavRail />
       <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <Flagship />
+      <Work />
+      <AboutContact />
       <Footer />
     </div>
   )
