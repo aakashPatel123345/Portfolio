@@ -75,9 +75,9 @@ export default function AboutContact() {
         <Reveal as="div" index={1} className="about-contact__copy">
           <p className="about-contact__name">Aakash Patel</p>
           <p className="about-contact__bio">
-            Full-time software engineer at <span className="bracket">[KPMG]</span>, working in
-            .NET, Angular and Azure. Most of my own time goes to building AI powered apps — where a
-            model's output meets a schema, a constraint, and someone who has to trust the result.
+            Full-time software engineer at KPMG, working in .NET, Angular and Azure. Most of my
+            own time goes to building AI powered apps — where a model’s output meets a schema, a
+            constraint, and someone who has to trust the result.
           </p>
         </Reveal>
       </div>
