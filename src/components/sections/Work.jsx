@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import SectionHead from '../SectionHead';
 import WorkCard from './WorkCard';
 import Reveal from '../Reveal';
+import DemoStage from '../DemoStage';
 import '../../styles/components/work.css';
 
 function RetrievalGlyph() {
@@ -60,6 +62,7 @@ const PROJECTS = [
     line: 'Retrieval-augmented chatbot grounded in a fixed document set.',
     tech: 'React · FastAPI · LangChain · Gemini',
     link: 'https://github.com/aakashPatel123345/Personal-AI-Chatbot',
+    demo: null,
     Glyph: RetrievalGlyph,
   },
   {
@@ -68,19 +71,37 @@ const PROJECTS = [
     line: 'Trading platform with real-time lookups and an LLM layer over market data.',
     tech: 'React · OpenAI · Polygon',
     link: '[PROJECT URL]',
+    demo: null,
     Glyph: PriceSeriesGlyph,
   },
   {
     index: '03',
     title: 'Image classifier',
-    line: 'Custom convolutional network trained from scratch, 90% held-out accuracy.',
-    tech: 'Python · PyTorch',
-    link: '[PROJECT URL]',
+    line: 'ResNet18 fine-tuned on a curated 74-species set from Open Images — 81% held-out accuracy, quantized to int8 and running client-side in the browser.',
+    tech: 'Python · PyTorch · ONNX Runtime Web',
+    link: null,
+    linkLabel: 'Live demo',
+    demo: 'image-classifier',
     Glyph: ClassificationMatrixGlyph,
   },
 ];
 
 export default function Work() {
+  const [activeDemo, setActiveDemo] = useState(null);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash.startsWith('#demo=')) {
+      setActiveDemo(decodeURIComponent(hash.slice('#demo='.length)));
+    }
+  }, []);
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const newHash = activeDemo ? `#demo=${encodeURIComponent(activeDemo)}` : '';
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${newHash}`);
+  }, [activeDemo]);
+
   return (
     <section id="selected-work" className="work">
       <Reveal>
@@ -88,9 +109,18 @@ export default function Work() {
       </Reveal>
       <div className="work__grid">
         {PROJECTS.map((project, i) => (
-          <WorkCard key={project.index} {...project} revealIndex={i} />
+          <WorkCard
+            key={project.index}
+            {...project}
+            revealIndex={i}
+            isDemoOpen={project.demo != null && activeDemo === project.demo}
+            onToggleDemo={() =>
+              setActiveDemo((cur) => (cur === project.demo ? null : project.demo))
+            }
+          />
         ))}
       </div>
+      <DemoStage activeId={activeDemo} onClose={() => setActiveDemo(null)} />
     </section>
   );
 }

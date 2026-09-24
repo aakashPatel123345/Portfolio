@@ -12,6 +12,10 @@
   gap: var(--gutter);
 }
 
+.work__demo {
+  margin-top: var(--gutter);
+}
+
 .work-card {
   display: flex;
   flex-direction: column;
@@ -75,6 +79,17 @@
 .work-card__link--inert {
   display: block;
   color: var(--muted);
+}
+
+.work-card__link--button {
+  background: none;
+  border: none;
+  border-top: 1px solid var(--rule);
+  width: 100%;
+  justify-content: flex-start;
+  font: inherit;
+  font-size: var(--body-size);
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {
