@@ -1,8 +1,19 @@
 import Reveal from '../Reveal';
 
 export default function WorkCard(props) {
-  const { index, title, line, tech, link, revealIndex } = props;
-  const isPlaceholder = link.startsWith('[');
+  const {
+    index,
+    title,
+    line,
+    tech,
+    link,
+    linkLabel = 'View project',
+    revealIndex,
+    demo,
+    isDemoOpen,
+    onToggleDemo,
+  } = props;
+  const isPlaceholder = link != null && link.startsWith('[');
 
   return (
     <Reveal as="article" index={revealIndex} threshold={0.3} className="work-card">
@@ -13,9 +24,19 @@ export default function WorkCard(props) {
       <h3 className="work-card__title">{title}</h3>
       <p className="work-card__line">{line}</p>
       <p className="work-card__tech mono-label">{tech}</p>
-      {isPlaceholder ? (
+      {demo ? (
+        <button
+          type="button"
+          className="work-card__link work-card__link--button"
+          aria-expanded={isDemoOpen}
+          aria-controls="demo-stage"
+          onClick={onToggleDemo}
+        >
+          {isDemoOpen ? 'Hide demo →' : 'Live demo →'}
+        </button>
+      ) : isPlaceholder ? (
         <span className="work-card__link work-card__link--inert">
-          View project → <span className="bracket">{link}</span>
+          {linkLabel} → <span className="bracket">{link}</span>
         </span>
       ) : (
         <a
@@ -23,9 +44,9 @@ export default function WorkCard(props) {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`View ${title} project (opens in new tab)`}
+          aria-label={`${linkLabel} — ${title} (opens in new tab)`}
         >
-          View project →
+          {linkLabel} →
         </a>
       )}
     </Reveal>
